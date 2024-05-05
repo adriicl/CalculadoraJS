@@ -1,16 +1,53 @@
-.screen {
-    height: 50px;
-    width: 150px;
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.calculadora {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.pantalla {
+    height: 60px;
+    width: calc(100% - 40px);
     margin-bottom: 10px;
+    padding: 10px;
+    font-size: 24px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    text-align: right;
 }
 
-.keys {
-    width: 250px;
+.teclas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
 }
 
-.btn,
-.operator {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 5px;
+.boton,
+.operador {
+    width: 70px;
+    height: 70px;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boton:hover,
+.operador:hover {
+    background-color: #e0e0e0;
+}
+#botonC{
+    float: inline-end;
+    margin-left: 10px;
 }
